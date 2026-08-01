@@ -1,0 +1,109 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="731px" height="459px" viewBox="0 0 731 459" enable-background="new 0 0 731 459" xml:space="preserve">
+ <style>
+ a {cursor:pointer}
+.on-lnk{fill:#64B448; font-weight:bold; cursor:pointer;}
+.on {fill:#64B448; font-weight:bold; cursor:pointer;}
+.off {fill:#4167B1; cursor:pointer}
+.cursor {cursor:pointer}
+.off_blue {fill:#4167B1;cursor:pointer}
+.off_yellow {fill:#FDE398; cursor:pointer}
+
+</style>
+<?xml version="1.0" encoding="UTF-8"?>
+<rect x="0.5" y="-24" fill="#FFFFFF" width="645" height="337"/>
+<g>
+	<rect x="449" y="14.5" fill="#FFFFFF" fill-opacity="0" width="115" height="101"/>
+	<g>
+		<rect x="329" y="14.5" fill="#4468B1" fill-opacity="0" width="115" height="28"/>
+		<g>
+			<text transform="matrix(1 0 0 1 550 24.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Star-Bellied Blue</text>
+			<text transform="matrix(1 0 0 1 550 40.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Sneetches</text>
+		</g>
+		<rect x="533" y="14.5" fill="#4468B1" width="12" height="12"/>
+	</g>
+	<g>
+		<rect x="533" y="49.5" fill="#4468B1" fill-opacity="0" width="115" height="12"/>
+		<g>
+			<text transform="matrix(1 0 0 1 550 59.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Blue Sneetches</text>
+		</g>
+		<rect x="533" y="49.5" fill="#CCDAF0" width="12" height="12"/>
+	</g>
+	<g>
+		<rect x="533" y="68.5" fill="#4468B1" fill-opacity="0" width="115" height="28"/>
+		<g>
+			<text transform="matrix(1 0 0 1 550 78.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Star-Bellied</text>
+			<text transform="matrix(1 0 0 1 550 94.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Yellow Sneetches</text>
+		</g>
+		<rect x="533" y="68.5" fill="#FDE398" width="12" height="12"/>
+	</g>
+	<g>
+		<rect x="533" y="103.5" fill="#4468B1" fill-opacity="0" width="115" height="12"/>
+		<g>
+			<text transform="matrix(1 0 0 1 550 113.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Yellow Sneetches</text>
+		</g>
+		<rect x="533" y="103.5" fill="#F8F184" width="12" height="12"/>
+	</g>
+</g>
+<g>
+	<rect x="14" y="-0.5" fill="#FFFFFF" fill-opacity="0" width="501.348" height="233"/>
+	<g>
+		<g>
+			<rect x="14" y="-0.5" fill="#CCCCCC" width="1.109" height="233"/>
+			<rect x="113.826" y="-0.5" fill="#CCCCCC" width="1.109" height="233"/>
+			<rect x="213.652" y="-0.5" fill="#CCCCCC" width="1.109" height="233"/>
+			<rect x="313.478" y="-0.5" fill="#CCCCCC" width="1.109" height="233"/>
+			<rect x="402.212" y="-0.5" fill="#CCCCCC" width="1.109" height="233"/>
+			<rect x="490.946" y="-0.5" fill="#CCCCCC" width="1.108" height="233"/>		
+        </g>
+		<g>
+			<rect class="cursor" id="starbelliedbluesneetches" x="14" y="45.444" fill="#4468B1" width="0" height="34.458">
+            <set attributeName="opacity" from="1" to=".6" begin="starbelliedbluesneetches.mouseover" end="starbelliedbluesneetches.mouseout"/>
+            </rect>
+			<rect class="cursor" id="bluesneetches" x="14" y="80.722" fill="#CCDAF0" width="0" height="34.458">
+			<set attributeName="opacity" from="1" to=".6" begin="bluesneetches.mouseover" end="bluesneetches.mouseout"/>
+            </rect>
+            <rect class="cursor" id="starbelliedyellowsneetches" x="14" y="116" fill="#FDE398" width="0" height="34.458">
+			<set attributeName="opacity" from="1" to=".6" begin="starbelliedyellowsneetches.mouseover" end="starbelliedyellowsneetches.mouseout"/>
+</rect>
+            <rect class="cursor" id="yellowsneetches" x="14" y="151.278" fill="#F8F184" width="" height="34.458">		
+			<set attributeName="opacity" from="1" to=".6" begin="yellowsneetches.mouseover" end="bluesneetches.mouseout"/>
+</rect>
+</g>
+    	<g>
+			<rect x="14" y="-0.5" fill="#333333" width="1.109" height="233"/>		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 15.1836 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">0%</text>
+	</g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 115.2344 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">10%</text>
+	</g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 215.5605 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">20%</text>
+	</g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 312.8857 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">30%</text>
+	</g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 401.6201 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">40%</text>
+	</g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 490.3545 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">50%</text>
+	</g>
+</g>
+<line y2="300" x2="656.738" y1="300" x1="20" stroke-width="4" stroke="#CBDAF0" fill="none"/>
+    <circle r="7.5" cy="300" cx="25" class="on-lnk" onclick="changeClassShape(this.id); loadBarData('2005')" id="2005_c"/>
+    <circle r="7.5" cy="300" cx="251.913" fill="#FEE499" class="off" onclick="changeClassShape(this.id); loadBarData('2009')" id="2009_c"/>
+    <circle r="7.5" cy="300" cx="352.413" fill="#FEE499" class="off" onclick="changeClassShape(this.id); loadBarData('2010')" id="2010_c"/>
+    <circle r="7.5" cy="300" cx="451.413" fill="#FEE499" class="off" onclick="changeClassShape(this.id); loadBarData('2011')" id="2011_c"/>
+    <circle r="7.5" cy="300" cx="567.326" fill="#FEE499" class="" onclick="changeClassShape(this.id); loadBarData('2012')" id="2012_c"/>
+    <text font-size="12" font-family="'Arial'" fill="#4167B1" class="on-lnk" transform="matrix(1 0 0 1 15 340)" id="2005_lnk"><a onClick="changeClassText('2005_lnk'); loadBarData('2005')" title="test5">2005</a></text>
+    <text font-size="12" font-family="'Arial'" class="off" transform="matrix(1 0 0 1 238.7383 340)" id="2009_lnk"><a onClick="changeClassText('2009_lnk'); loadBarData('2009')" title="test4">2009</a></text>
+    <text font-size="12" font-family="'Arial'" class="off" transform="matrix(1 0 0 1 340.2383 340)" id="2010_lnk"><a onClick="changeClassText('2010_lnk'); loadBarData('2010')" metadata="test3">2010</a></text>
+    <text font-size="12" font-family="'Arial'" class="off" transform="matrix(1 0 0 1 439.2383 340)" id="2011_lnk" title="test2"><a onClick="changeClassText('2011_lnk'); loadBarData('2011')">2011</a></text>
+    
+    <text font-size="12" font-family="'Arial'" class="off" transform="matrix(1 0 0 1 554.2383 340)" id="2012_lnk"><a onClick="changeClassText('2012_lnk'); loadBarData('2012');">2012</a></text>
+</svg>   

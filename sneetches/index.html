@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+<script type="text/javascript" src="/Scripts/svg.js"></script>
+<script type="text/javascript">
+function changeClass3(id)
+{
+	
+	var idS =id.replace('btn','');
+	$('.years ul li').attr('class','taboff');
+	$('#boxes div.shower').attr('class','hider');
+			
+ 	
+	$('#'+idS).attr('class','tabon');
+	$('#'+id).attr('class','tabon');
+	$('#'+idS+'box').attr('class','shower');
+	
+}
+
+function changeClassText(id)
+{
+	idC=id.replace('lnk','c');
+	$('.on-lnk').attr('class','off-lnk');
+	
+	$('.on').attr('class','off-lnk');
+	$('#'+id).attr('class','on-lnk');
+	$('#'+idC).attr('class', 'on-lnk');
+	
+	
+}
+
+function changeClassShape(id)
+{
+	idC=id.replace('c','lnk');
+	$('.on-lnk').attr('class','off-lnk');
+	$('.on').attr('class','off-lnk');
+	$('#'+id).attr('class','on-lnk');
+	$('#'+idC).attr('class', 'on-lnk');
+	
+	
+}
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Vizualizing Dr. Seuss' Sneetches</title>
+
+<script type="text/javascript" src="/Scripts/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="/Scripts/sneetch_viz.js"></script>
+
+
+
+<link href="/sneetches/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onLoad="loadJSON(); loadSecondJSON();">
+<div class="main" >
+<div class="main_box">
+<div class="header" >
+<div style="float:left; margin-top:10px; width:300px">
+<h2>Sneetch Demographics</h2>
+</div>
+<div style="float:left;margin-right:10px;border-right:3px solid #fffc75;margin:10px;margin-left:15px;height:30px"></div>
+<div style="float:left; margin-left:15px; margin-right:10px; width:330px;color:white; margin-top:-3px;">The Sneetch population at Sneetch Beach on the northern edge of the Hoozton Valley has exploded in the last 10 years. Find out below how the demographics of the Valley has changed.</div>
+</div>
+<div class="years" >
+<ul>
+	 
+	<li id="who" class="tabon"><a title="whobtn"  onclick="changeClass3(this.title);">What are Sneetches?</a></li>
+  <li id="why" class="taboff"><a title="whybtn"  onclick="changeClass3(this.title);">Why you should care?</a></li>
+  <li id="valley" class="taboff"><a title="valleybtn"  onclick="changeClass3(this.title);">Hoozton Valley</a></li>
+  <li id="data" class="taboff"><a title="databtn"  onclick="changeClass3(this.title);">The Data</a></li>
+</ul>
+</div>
+<div style="clear:both"></div>
+<div id="boxes">
+<div id="databox" class="hider" style="margin:10px; margin-bottom:0px;max-height:390px;">
+<div id="year"></div>
+	
+	
+<div id="sneetch_data" style="position:absolute; min-height:250px; width:250px;margin-top:-40px; background:white;-moz-box-shadow: 5px 5px 5px #ccc;-webkit-box-shadow: 5px 5px 5px #ccc;	box-shadow: 5px 5px 5px #ccc; border:1px dotted #ccc; margin-left:425px;display:none;">
+
+	<div style="margin-left:10px; font-size:30px; margin-top:-15px; background:#64B448; border:1px solid #ccc;width:70px; height:50px; float:right; margin-left:20px;padding:5px; color:#FFFC7F; font-family:Verdana, Arial, Helvetica, sans-serif" id="percentage_box"></div>
+</div>	
+   
+<script type="image/svg+xml">
+  <svg  x="0px" y="0px"
+	 width="731px" height="459px" viewBox="0 0 731 459" enable-background="new 0 0 731 459" id="Sneetch Chart">
+ <style>
+ a {cursor:pointer}
+.on-lnk{fill:#FDE398; font-weight:bold; cursor:pointer; font-size: 18px;}
+.on {fill:#64B448; font-weight:bold; cursor:pointer;}
+.off-lnk {fill:#4167B1; cursor:pointer}
+.cursor {cursor:pointer}
+.off_blue {fill:#4167B1;cursor:pointer}
+.off_yellow {fill:#FDE398; cursor:pointer}
+
+</style>
+<rect x="0.5" y="-24" fill="#FFFFFF" width="645" height="337"/>
+<g>
+	<rect x="449" y="14.5" fill="#FFFFFF" fill-opacity="0" width="115" height="101"/>
+	<g>
+		<rect x="329" y="14.5" fill="#4468B1" fill-opacity="0" width="115" height="28"/>
+		<g>
+			<text transform="matrix(1 0 0 1 550 24.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Star-Bellied Blue</text>
+			<text transform="matrix(1 0 0 1 550 40.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Sneetches</text>
+		</g>
+		<rect x="533" y="14.5" fill="#4468B1" width="12" height="12"/>
+	</g>
+	<g>
+		<rect x="533" y="49.5" fill="#4468B1" fill-opacity="0" width="115" height="12"/>
+		<g>
+			<text transform="matrix(1 0 0 1 550 59.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Blue Sneetches</text>
+		</g>
+		<rect x="533" y="49.5" fill="#CCDAF0" width="12" height="12"/>
+	</g>
+	<g>
+		<rect x="533" y="68.5" fill="#4468B1" fill-opacity="0" width="115" height="28"/>
+		<g>
+			<text transform="matrix(1 0 0 1 550 78.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Star-Bellied</text>
+			<text transform="matrix(1 0 0 1 550 94.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Yellow Sneetches</text>
+		</g>
+		<rect x="533" y="68.5" fill="#FDE398" width="12" height="12"/>
+	</g>
+	<g>
+		<rect x="533" y="103.5" fill="#4468B1" fill-opacity="0" width="115" height="12"/>
+		<g>
+			<text transform="matrix(1 0 0 1 550 113.7002)" fill="#4468B1" font-family="'Arial'" font-size="12">Yellow Sneetches</text>
+		</g>
+		<rect x="533" y="103.5" fill="#F8F184" width="12" height="12"/>
+	</g>
+</g>
+<g>
+	<rect x="14" y="-0.5" fill="#FFFFFF" fill-opacity="0" width="501.348" height="233"/>
+	<g>
+		<g>
+			<rect x="14" y="-0.5" fill="#CCCCCC" width="1.109" height="233"/>
+			<rect x="113.826" y="-0.5" fill="#CCCCCC" width="1.109" height="233"/>
+			<rect x="213.652" y="-0.5" fill="#CCCCCC" width="1.109" height="233"/>
+			<rect x="313.478" y="-0.5" fill="#CCCCCC" width="1.109" height="233"/>
+			<rect x="402.212" y="-0.5" fill="#CCCCCC" width="1.109" height="233"/>
+			<rect x="490.946" y="-0.5" fill="#CCCCCC" width="1.108" height="233"/>		
+        </g>
+		<g>
+			<rect class="cursor" id="starbelliedbluesneetches" x="14" y="12.722" fill="#4468B1" width="0" height="34.458">
+            <set attributeName="opacity" from="1" to=".6" begin="starbelliedbluesneetches.mouseover" end="starbelliedbluesneetches.mouseout"/>
+			<set attributeName="fill" from="#4468B1" to="#64B448" begin="starbelliedbluesneetches.mouseover" end="starbelliedbluesneetches.mouseout"/>
+            </rect>
+			<rect class="cursor" id="bluesneetches" x="14" y="67.722" fill="#CCDAF0" width="0" height="34.458">
+			<set attributeName="opacity" from="1" to=".6" begin="bluesneetches.mouseover" end="bluesneetches.mouseout"/>
+			<set attributeName="fill" from="#4468B1" to="#64B448" begin="bluesneetches.mouseover" end="bluesneetches.mouseout"/>
+            </rect>
+            <rect class="cursor" id="starbelliedyellowsneetches" x="14" y="122.722" fill="#FDE398" width="0" height="34.458">
+			<set attributeName="opacity" from="1" to=".6" begin="starbelliedyellowsneetches.mouseover" end="starbelliedyellowsneetches.mouseout"/>
+		<set attributeName="fill" from="#4468B1" to="#64B448" begin="starbelliedyellowsneetches.mouseover" end="starbelliedyellowsneetches.mouseout"/>
+
+</rect>
+            <rect class="cursor" id="yellowsneetches" x="14" y="177.722" fill="#F8F184" width="" height="34.458">		
+			<set attributeName="opacity" from="1" to=".6" begin="yellowsneetches.mouseover" end="yellowsneetches.mouseout"/>							
+			<set attributeName="fill" from="#4468B1" to="#64B448" begin="yellowsneetches.mouseover" end="yellowsneetches.mouseout"/>
+
+</rect>
+</g>
+    	<g>
+			<rect x="14" y="-0.5" fill="#333333" width="1.109" height="233"/>		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 15.1836 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">0%</text>
+	</g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 115.2344 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">10%</text>
+	</g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 215.5605 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">20%</text>
+	</g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 312.8857 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">30%</text>
+	</g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 401.6201 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">40%</text>
+	</g>
+	<g>
+		<text transform="matrix(1.1092 0 0 1 490.3545 248.0498)" fill="#444444" font-family="'Arial'" font-size="13">50%</text>
+	</g>
+</g>
+<line y2="300" x2="656.738" y1="300" x1="20" stroke-width="4" stroke="#CBDAF0" fill="none"/>
+    <circle r="7.5" cy="300" cx="25" class="on-lnk"  fill="#FEE499" onclick="changeClassShape(this.id); loadBarData('2005')" id="2005_c"/>
+    <circle r="7.5" cy="300" cx="251.913" fill="#FEE499" class="off-lnk" onclick="changeClassShape(this.id); loadBarData('2009')" id="2009_c"/>
+    <circle r="7.5" cy="300" cx="352.413" fill="#FEE499" class="off-lnk" onclick="changeClassShape(this.id); loadBarData('2010')" id="2010_c"/>
+    <circle r="7.5" cy="300" cx="451.413" fill="#FEE499" class="off-lnk" onclick="changeClassShape(this.id); loadBarData('2011')" id="2011_c"/>
+    <circle r="7.5" cy="300" cx="567.326" fill="#FEE499" class="off-lnk" onclick="changeClassShape(this.id); loadBarData('2012')" id="2012_c"/>
+    <text font-size="12" font-family="'Arial'" fill="#4167B1" class="on-lnk" transform="matrix(1 0 0 1 15 340)" id="2005_lnk"><a onclick="changeClassText('2005_lnk'); loadBarData('2005')" title="test5">2005</a></text>
+    <text font-size="12" font-family="'Arial'" class="off-lnk" transform="matrix(1 0 0 1 238.7383 340)" id="2009_lnk"><a onclick="changeClassText('2009_lnk'); loadBarData('2009')" title="test4">2009</a></text>
+    <text font-size="12" font-family="'Arial'" class="off-lnk" transform="matrix(1 0 0 1 340.2383 340)" id="2010_lnk"><a onclick="changeClassText('2010_lnk'); loadBarData('2010')">2010</a></text>
+    <text font-size="12" font-family="'Arial'" class="off-lnk" transform="matrix(1 0 0 1 439.2383 340)" id="2011_lnk" title="test2"><a onclick="changeClassText('2011_lnk'); loadBarData('2011')">2011</a></text>
+    
+    <text font-size="12" font-family="'Arial'" class="off-lnk" transform="matrix(1 0 0 1 554.2383 340)" id="2012_lnk"><a onclick="changeClassText('2012_lnk'); loadBarData('2012');">2012</a></text>
+</svg>   
+</script>
+
+</div>
+
+<div id="whobox" class="shower">
+<div id="image" style="float:left; margin:10px;">
+<img  src="/images/sneetch_w_ball.png" alt="Dr. Seuss' Sneetch" width="252" height="277"/></div>
+<div id="text">
+  <h3>What Are the Sneetches?</h3>
+<p>The Sneetches are a race of creatures that live in the Hoozton Valley of Seussland, a country inhabitied by humans, particularly talkative cats, elephants, grinches, and of course Sneetches.  Sneetches are yellow bird-like animals who live in coastal areas.  They are particularly fond of frankfurters and mashmallows and often are seen around bonfires roasting these delicacies.  Sneetches are either yellow or blue and either have "Stars on Thars" or don't.</p>  
+<p>Up until only a few years ago, star-bellied Sneetches were known to look down upon the non-star-bellied sort, refusing to socialize or even acknowledge their brethren with undecorated bellies.  After a particularly ugly run-in with Huckster extraordinaire Slyvester McMonkey McBean (aka the "Fix-it-up Chappie") in which Sneetches  spent their fortunes on cosmetic improvements, Sneetches of all stripes began to treat each other more equitably and thus a new era in those beaches at the north-end of Hoozton valley began.  This particular time, after the "Fix-Up" is what this study is most concerned with.</p>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div id="whybox" class="hider" >
+<div id="image" style="float:left; margin:10px; height:265px; margin-top:35px">
+<img  src="/images/sneetch.png" alt="Dr. Seuss' Sneetch" width="109" height="250"/></div>
+<div id="text">
+  <h3>Why You Should Care?</h3>
+  <p>The Sneetch population has doubled in the past 50 years. Sneetch Expert  Kimler Corey  author of <em>Sneetches on an Island: The Unfortunate Racial History of Sneetches and How They Have Learned Love Each Other for What's on the Inside,</em> in a recent interview with NPR's Terry Gross noted that the number of Sneetches living in Hoozton Valley is projected to increase three-fold in the next 20 years and that this increased population will create a huge demand for frankfurters and marshmallows, which in turn will cause the price of these products to skyrocket. </p>
+  <p>Industry leaders Oscar Meyer and Kraft are preparing for this population explosion by hiring more factory workers in the U.S. and China. Though an increased Sneetch population will put a strain on both the frankfurter and marchmallow industry, a joint report by the United States Department of Commerce and Labor projects thousands of new jobs in the Midwestern United States in the next 10 years due to the increased demand for these staples of the Sneetch diet.</p>
+  <p>Moreover Sneetches - both Star-bellied and blank-bellied - have become an economic and political force in Suessville.  Their support tipped the 2008 Presidential Election of Seussville towards the Cat in the Hat ticket, and Donald E. Sneetch was the biggest donor to President Cat in the Hat's SuperPAC &quot;Green Eggs and Sam&quot;.</p>
+  <p>Sneetches will continue to be a driving force in the growing economy and society of Suessville for year to come.</p>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div id="valleybox" class="hider" >
+<div id="image" style="float:left; margin:10px;">
+<img  style="border:1px solid #ccc"src="/images/HooztonValley.png" alt="Dr. Seuss' Sneetch" width="200" height="231"/></div>
+<div id="text">
+  <h3>Hoozton Valley</h3>
+  <p>Similar to Silcon Valley in America, Hoozton Valley in last 30 years has undergone a tech boom. After Slyvester McMonkey McBean left the Sneetches, an innately industrious species, licked their wounds and did what they do best, they innovated. </p>
+  <p>Five years after getting &quot;huckstered&quot; by the &quot;Fix-It-Up Chappie&quot;, the two races of sneetches patched things up which led to an incredible amount of cross-pollination and innovation. Hoozton Valley, just south of the metropolis Whoville and in the shadows of Mount Crumpit is now prized real estate. Dotted with immaculate mansions, the front range of Mount Crumpit is home to famous inventors, Sneetch Jobs an innovator in the personal frankfurter machine and Mack Sneetcherberg an innovator and a creator of the Sneetches most used social netoworking site, SneetchBook.</p>
+</div>
+</div>
+</div>
+<div style="clear:both;margin-right:15px; margin-left:15px; border: 1px dotted #ccc"></div>
+
+<div class="footer">
+<div id="about_data" class="white_box" style="margin-left:350px;"><div class="close" onClick="$('#about_data').hide()"><img src="/images/collapse_btn_bigger2.png" alt="close button"/></div>
+The data comes from the most recent Sneetch Census which is taken once a year in January/February.  Due to their penchant for privacy, the data has +3% to -7% margin for error.  We try to respect all Sneetches wishes and if they did not want to participate in our census, we simply extrapolate as much data as we can from other sources (city forms, newspapers, the Internet).</div>
+
+<div id="about_project" class="white_box" style=" margin-left:300px;"><div class="close" onClick="$('#about_project').hide()"><img src="/images/collapse_btn_bigger2.png" alt="close button"/></div>
+This project was funded by the Organization to Keep Sneetches Healthy. The mission of our NGO is to help facilitate the incubation of the Sneetch's culture and economy. Sneetches are beautiful, industrious creatures and we believe that they can thrive with a little nudge in the right direction.</div>
+<ul style="margin-left:410px;">
+<li><a class="cursor" onClick="$('#about_project').fadeIn(); $('#about_data').hide();">About this Project</a></li> 
+<li>|</li>
+<li><a class="cursor" onClick="$('#about_data').fadeIn();
+$('#about_project').hide();">About our Data</a></li>
+</ul>
+<div style="clear:both"></div>
+</div>
+</div>
+
+</div>
+</body>
+</html>
