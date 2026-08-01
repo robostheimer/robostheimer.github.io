@@ -1,0 +1,54 @@
+<section class="internal_search">
+	<section  tabindex="150" class="search" aria-hidden="false" data-icon="Z" tabindex="153">
+		<span class="icon-search"></span>
+
+	</section>
+	<form id="search" name="search" class="ng-pristine ng-valid">
+		<label style="visibility:hidden">Search Timeline</label>
+		<input tabindex="150" type="search" name="search" value="" placeholder="Search" id="search" ng-model="query" tabindex="152" ng-change="filterData(query,datatype);" ng-delay="100">
+	</form>
+
+	<section class="clear"></section>
+	<section>
+		<section  ng-repeat ="item in sortButtons" class="view {{item.state}}"  >
+			<span class="icon-{{item.name}}" ng-click="controlSort(item.type,datatype)"></span>
+			<section class="sortby"> 
+				<ul class="{{item.type}}" event-delegate="li | reOrder(active, item.type, item);"  type="click" >
+					<li ng-repeat="active in active_types" class="{{active.state}}"><a >{{active.typey.replace('_', ' ').toTitleCase()}}</a></li>
+				</ul> 
+			</section>
+		</section>
+		<section  ng-repeat ="item in viewButtons" class="view {{item.state}}" ng-click="controlViews(item.type)" >
+			<a href="{{item.href}}"><span class="icon-{{item.name}}"></span></a>
+			
+		</section>
+		
+	</section>
+
+</section>
+<section class="buttons_holder" >
+	<section ng-repeat="item in navButtons"  class="button {{item.state}}" ng-click="changeState(item.name)">
+		<a href="{{item.href}}">{{item.name}}</a>
+	</section>
+	<section class="action_buttons"  download-button data="{{dataCopy}}">
+	</section>
+	<section class="action_buttons"  ng-click ="runPost(data)">
+		<span class="icon-folder-upload"></span>
+	</section>
+	<section class="action_buttons"  ng-click="codeToggle()">
+		<span class="icon-embed"></span>
+		
+	</section>
+	<section ng-show="showJSON==true" class="code" >
+			<section class="close" ng-click="codeToggle()" ><span class="icon-cancel-circle" ></span></section>
+			<section class="close" download-button data={{data}}></section>
+			<pre>
+				{{dataCopy}}
+			</pre>
+			
+		</section>
+	<section class="action_buttons"  ng-click="addItem()">
+		<span class="icon-plus"></span>
+	</section>
+
+</section>

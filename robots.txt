@@ -1,0 +1,9 @@
+# robots.txt 
+
+User-agent: *
+Disallow: /fonts/
+Disallow: /xml/
+Disallow: /DEVELOPMENT/
+Disallow:/Old_Website/
+Disallow:/Archive_of_education_web(082410)/
+Disallow:/Templates/

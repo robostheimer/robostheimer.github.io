@@ -1,0 +1,129 @@
+<section ng-include="'partials/search_buttons.html'"></section>
+
+
+<section class="container" id="container" ng-model="viewButtons" >
+
+	<section id="movingBallG" ng-show="loading==true">
+		<section class="movingBallLineG"></section>
+		<section id="movingBallG_1" class="movingBallG"></section>
+	</section>
+	<!--------Cards View-------------->
+	<section id="table" ng-  class="stage" id='stage'>
+
+		<section id="row">	
+		
+			
+					<dl resize-card  class="col-md-3 new sources" ng-repeat="item in adder.sources  track by $index"  id="row">
+						<dt class="card-text"   >
+							<dd>
+								<label>Name:</label>
+								<input type="text" ng-model="item.name" ng-blur="createParserClass(item)" placeholder="Name" value="{{item.name}}"/>
+							</dd>
+							<dd class="sources">
+								<label>Id:</label> {{item.id}}
+							</dd>
+							<dd  class="sources">
+								<label>Feed Url:</label><input type="url" ng-model="item.feed_url" placeholder="Feed Url" ng-model="item.feed_url"  value="{{item.feed_url}}" ng-blur="createDomain(item.feed_url, item)"  ng-change="checkInput(item.feed_url, $index,adder.sources)" ng-delay="700"/><span class="red" ng-hide="item.httpThere==true">*Please add a properly formatted url.</span>
+							</dd>
+							<dd  class="sources">
+								<label>Domain:</label> <input type="text" ng-model="item.domain"  placeholder="Domain" value=""/>
+							</dd>
+							<dd  class="sources">
+								
+								<label>Parser Class:</label> <input type="text" ng-model="item.parser_class" placeholder="Parser Class" value="Parser"/>
+							</dd>
+							<dd  class="sources">
+								<label>CDN-Domains:</label> <input type="text" ng-model="item.cdn_domains" placeholder="CDN-Domains" value="{{item.cdn_domains.toString()}}"/>
+							</dd>
+							<dd  class="whitelist" ng-click="changeCheck('whitelist', $index, adder.sources)">
+								<label>Whitelist</label>
+								
+								<span class="icon-checkbox-unchecked blue" ng-hide="item.whitelist==true" ng-model="item.whitelist"></span>
+								<span class="icon-checkbox-checked blue" ng-hide="item.whitelist==false"  ng-model="item.whitelist"></span>
+								<!--<input type="text" placeholder="Whitelist" pattern="true|True|false|False|T|F" value="{{item.whitelist}}"/>-->
+							</dd>
+							<dd class="card-button">
+							<span class="icon-floppy-disk"  ng-click="savItem($index, 'new');"></span>
+								<span class="icon-cancel-circle" ng-click="close($index)"></span>
+							</dd>
+						</dt>
+
+					</dl>
+				
+			
+			
+
+				
+					<dl ng-repeat ="item in data.active track by $index" resize-card  class="col-md-3 sources" >
+						<dt class="card-text">
+							<dd ng-hide="item.Edit==true">
+								Name: {{item.name}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								ID: {{item.id}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Feed URL: <a href="{{item.feed_url}}" target="_blank">{{item.feed_url}}</a>
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Domain: {{item.domain}}
+							</dd>
+							<dd>
+								Parser-Class: {{item.parser_class}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								CDN-Domains: {{item.cdn_domains.toString();}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Whitelist: 
+								{{item.whitelist}}
+							</dd>
+							<dd class="card-button" ng-hide="item.Edit==true">
+								<span class="icon-pencil" ng-click="editItem($index)"></span>
+								<span class="icon-bin" ng-click="deleteItem($index)"></span>
+						
+							</dd>
+						
+							<dd  ng-hide="item.Edit==false" class="sources">
+								<label>Name:</label>
+								<input type="text" ng-model="item.name" ng-blur="createParserClass(item)" placeholder="Name" value="{{item.name}}"/>
+							</dd>
+							<dd ng-hide="item.Edit==false" class="sources">
+								<label>Id:</label> {{item.id}}
+							</dd>
+							<dd  ng-hide="item.Edit==false"  class="sources">
+								<label>Feed Url:</label><input type="url" ng-model="item.feed_url" placeholder="Feed Url" ng-model="item.feed_url" ng-change="checkInput(item.feed_url, $index, data.active)" value="{{item.feed_url}}" ng-blur="createDomain(item.feed_url, item)"  />
+								<span class="red" ng-hide="item.httpThere==true">*Please add a properly formatted url.</span>
+							</dd>
+							<dd  ng-hide="item.Edit==false" class="sources">
+								<label>Domain:</label> <input type="text" ng-model="item.domain" placeholder="Domain" value="{{item.domain}}"/>
+							</dd>
+							<dd  ng-hide="item.Edit==false" class="sources">
+								<label>Parser Class:</label> <input type="text" ng-model="item.parser_class" placeholder="Parser Class" value="{{item.parser_class}}"/>
+							</dd>
+							<dd ng-hide="item.Edit==false" class="sources">
+								<label>CDN-Domains:</label> <input type="text" ng-model="item.cdn_domains" placeholder="CDN-Domains" value="{{item.cdn_domains.toString()}}"/>
+							</dd>
+							<dd ng-hide="item.Edit==false" class="whitelist" ng-click="changeCheck('whitelist', $index, data.active)">
+								<label>Whitelist</label>
+								
+								<span class="icon-checkbox-unchecked blue" ng-hide="item.whitelist==true" ng-model="item.whitelist"></span>
+								<span class="icon-checkbox-checked blue" ng-hide="item.whitelist==false"  ng-model="item.whitelist"></span>
+								<!--<input type="text" placeholder="Whitelist" pattern="true|True|false|False|T|F" value="{{item.whitelist}}"/>-->
+							</dd>
+							<dd ng-hide="item.Edit==false" class="card-button">
+								<span class="icon-floppy-disk" ng-click="savItem($index)"></span>
+								<span class="icon-cancel-circle" ng-click="noEdit($index, item.id)"></span>
+						
+							</dd>
+						</dt>
+
+					</dl>
+			</section>
+
+		</section>
+
+</section>
+
+
+<section class="clear"></section>

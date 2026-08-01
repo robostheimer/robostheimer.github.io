@@ -1,0 +1,220 @@
+{
+  "sources": [
+    {
+      "name": "CNN",
+      "id": 1,
+      "feed_url": "http://rss.cnn.com/rss/cnn_allpolitics.rss",
+      "domain": "cnn.com",
+      "parser_class": "cnn_parser.CNNParser",
+      "cdn_domains": ["turner.com"],
+      "whitelist": true
+    },
+    {
+      "name": "Bloomberg",
+      "id": 2,
+      "feed_url": "http://www.bloomberg.com/politics/feeds/site.xml",
+      "domain": "bloomberg.com",
+      "parser_class": "bloomberg_parser.BloombergParser",
+      "cdn_domains": ["gotraffic.net"],
+      "whitelist": true
+    },
+    {
+      "name": "Fox News",
+      "id": 3,
+      "feed_url": "http://feeds.foxnews.com/foxnews/politics",
+      "domain": "foxnews.com",
+      "parser_class": "fox_news_parser.FOXNewsParser",
+      "cdn_domains": null,
+      "whitelist": false
+    },
+    {
+      "name": "MSNBC",
+      "id": 4,
+      "feed_url": "http://www.msnbc.com/feeds/latest",
+      "domain": "msnbc.com",
+      "parser_class": "msnbc_parser.MSNBCParser",
+      "cdn_domains": null,
+      "whitelist": false
+    },
+    {
+      "name": "ABC News",
+      "id": 5,
+      "feed_url": "http://feeds.abcnews.com/abcnews/politicsheadlines",
+      "domain": "abcnews.com",
+      "parser_class": "abc_news_parser.ABCNewsParser",
+      "cdn_domains": ["abcnews.com"],
+      "whitelist": true
+    },
+    {
+      "name": "NBC News",
+      "id": 6,
+      "feed_url": "http://feeds.nbcnews.com/feeds/nbcpolitics",
+      "domain": "nbcnews.com",
+      "parser_class": "nbc_news_parser.NBCNewsParser",
+      "cdn_domains": ["s-nbcnews.com"],
+      "whitelist": true
+    },
+    {
+      "name": "Reuters",
+      "id": 7,
+      "feed_url": "http://feeds.reuters.com/Reuters/PoliticsNews",
+      "domain": "reuters.com",
+      "parser_class": "reuters_parser.ReutersParser",
+      "cdn_domains": ["reutersmedia.net"],
+      "whitelist": true
+    },
+    {
+      "name": "CBS News",
+      "id": 8,
+      "feed_url": "http://www.cbsnews.com/latest/rss/politics",
+      "domain": "cbsnews.com",
+      "parser_class": "cbs_news_parser.CBSNewsParser",
+      "cdn_domains": ["cbsistatic.com"],
+      "whitelist": true
+    },
+    {
+      "name": "Forbes",
+      "id": 9,
+      "feed_url": "http://www.forbes.com/politics/feed2/",
+      "domain": "forbes.com",
+      "parser_class": "forbes_parser.ForbesParser",
+      "cdn_domains": null,
+      "whitelist": false
+    },
+    {
+      "name": "Wall Street Journal",
+      "id": 10,
+      "feed_url": "http://online.wsj.com/xml/rss/3_7087.xml",
+      "domain": "wsj.com",
+      "parser_class": "wall_street_journal_parser.WallStreetJournalParser",
+      "cdn_domains": ["wsj.net"],
+      "whitelist": true
+    },
+    {
+      "name": "USA Today",
+      "id": 11,
+      "feed_url": "http://onpolitics.usatoday.com/feed/",
+      "domain": "usatoday.com",
+      "parser_class": "usa_today_parser.USATodayParser",
+      "cdn_domains": ["wordpress.com"],
+      "whitelist": true
+    },
+    {
+      "name": "NPR",
+      "id": 12,
+      "feed_url": "http://www.npr.org/rss/rss.php?id=1014",
+      "domain": "npr.org",
+      "parser_class": "npr_parser.NPRParser",
+      "cdn_domains": ["npr.org"],
+      "whitelist": true
+    },
+    {
+      "name": "Huffington Post",
+      "id": 13,
+      "feed_url": "http://www.huffingtonpost.com/feeds/verticals/politics/index.xml",
+      "domain": "huffingtonpost.com",
+      "parser_class": "huffington_post_parser.HuffingtonPostParser",
+      "cdn_domains": null,
+      "whitelist": false
+    },
+    {
+      "name": "Huffington Post",
+      "id": 13,
+      "feed_url": "http://www.huffingtonpost.com/feeds/verticals/politics/news.xml",
+      "domain": "huffingtonpost.com",
+      "parser_class": "huffington_post_parser.HuffingtonPostParser",
+      "cdn_domains": null,
+      "whitelist": false
+    },
+    {
+      "name": "The Hill",
+      "id": 14,
+      "feed_url": "http://thehill.com/rss/syndicator/19110",
+      "domain": "thehill.com",
+      "parser_class": "the_hill_parser.TheHillParser",
+      "cdn_domains": null,
+      "whitelist": false
+    },
+    {
+      "name": "The Hill",
+      "id": 14,
+      "feed_url": "http://thehill.com/taxonomy/term/1077/feed",
+      "domain": "thehill.com",
+      "parser_class": "the_hill_parser.TheHillParser",
+      "cdn_domains": null,
+      "whitelist": false
+    },
+    {
+      "name": "National Journal",
+      "id": 15,
+      "feed_url": "http://www.nationaljournal.com/politics?rss=1",
+      "domain": "nationaljournal.com",
+      "parser_class": "national_journal_parser.NationalJournalParser",
+      "cdn_domains": ["nationaljournal.com"],
+      "whitelist": true
+    },
+    {
+      "name": "New York Times",
+      "id": 16,
+      "feed_url": "http://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+      "domain": "nytimes.com",
+      "parser_class": "new_york_times_parser.NewYorkTimesParser",
+      "cdn_domains": ["nytimes.com"],
+      "whitelist": true
+    },
+    {
+      "name": "Slate",
+      "id": 18,
+      "feed_url": "http://www.slate.com/articles/news_and_politics.fulltext.all.rss",
+      "domain": "slate.com",
+      "parser_class": "slate_parser.SlateParser",
+      "cdn_domains": null,
+      "whitelist": false
+    },
+    {
+      "name": "Washington Post",
+      "id": 19,
+      "feed_url": "http://feeds.washingtonpost.com/rss/politics",
+      "domain": "washingtonpost.com",
+      "parser_class": "washington_post_parser.WashingtonPostParser",
+      "cdn_domains": ["washingtonpost.com"],
+      "whitelist": true
+    },
+    {
+      "name": "Politico",
+      "id": 20,
+      "feed_url": "http://www.politico.com/rss/politicopicks.xml",
+      "domain": "politico.com",
+      "parser_class": "politico_parser.PoliticoParser",
+      "cdn_domains": ["politico.com"],
+      "whitelist": true
+    },
+    {
+      "name": "Politico",
+      "id": 20,
+      "feed_url": "http://www.politico.com/rss/Politico44box.xml",
+      "domain": "politico.com",
+      "parser_class": "politico_parser.PoliticoParser",
+      "cdn_domains": ["politico.com"],
+      "whitelist": true
+    },
+    {
+      "name": "Associated Press",
+      "id": 21,
+      "feed_url": "http://hosted.ap.org/lineups/TOPHEADS.rss?SITE=AP&SECTION=HOME",
+      "domain": "ap.org",
+      "parser_class": "associated_press_parser.AssociatedPressParser",
+      "cdn_domains": ["ap.org"],
+      "whitelist": true
+    },
+    {
+      "name": "Yahoo News",
+      "id": 22,
+      "feed_url": "http://news.yahoo.com/rss/politics",
+      "domain": "yahoo.com",
+      "parser_class": "yahoo_news_parser.YahooNewsParser",
+      "cdn_domains": ["yimg.com"],
+      "whitelist": true
+    }
+  ]
+}

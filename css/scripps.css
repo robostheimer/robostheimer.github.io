@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* CSS Document */
+	
+	body{font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+	h5{font-size:17px;}
+	#square_blue{
+	border:3px solid #0057a5;
+	width: 154px; 
+	height: 118px; 
+	background-image:url('http://teacheratsea.files.wordpress.com/2013/01/allfacts_marks5.jpg?w=157');
+	float:left; margin:5px;
+	cursor:pointer;
+	}
+	#square_green{
+	border:3px solid green;
+	width: 154px; 
+	height: 118px; 
+	background-image:url('http://teacheratsea.files.wordpress.com/2013/01/allfacts_marks3.jpg?w=157');
+	float:left; 
+	margin:5px;
+	cursor:pointer;
+	}
+	.news-story{ border: margin-top:20px;margin-bottom:20px;}
+	.news-story h5{color:#0057a5; margin-bottom:5px;}
+	
+	
+	#chart {font-family:Arial, Helvetica, sans-serif; border:1px solid #D1D1D1;background-color:#E8E8E8; width:700px;margin-bottom:20px;}
+
+	#text_column{width:448px;float:left;  border-left:none;background-color:#E8E8E8;} 
+	#text_column h2 {font-size:17px; text-transform:capitalize; margin-top:20px; margin-bottom:10px;margin-left:10px}
+	#text_column div.on{display:block}
+	#text_column div.off{display:none}
+	#text_column div ul{margin:0px;padding:15px; padding-top:0px}
+	#text_column div ul.leftcolumn, #text_column div.on ul.rightcolumn {float:left; width:192px; font-size:13px;}
+	#text_column div ul.leftcolumn li, #text_column div ul.rightcolumn li {color:#666666; margin:10px;}
+	#text_column div ul.leftcolumn li a, #text_column div ul.rightcolumn li a{color:#666666;}
+	#text_column div ul.leftcolumn li a:hover, #text_column div ul.rightcolumn li a:hover{color:orange;}
+	
+	#button_column{width:250px;float:left; border-right:1px solid #D1D1D1;background-color:#E8E8E8;}
+	#button_column ul{padding:0; margin:0px; margin-top:10px;margin-left:5px;margin-right:10px;}
+	#button_column ul li{padding:10px; font-size: 15px; list-style-type:none; cursor:pointer}
+	#button_column ul li.on{background:#8A8A8A}

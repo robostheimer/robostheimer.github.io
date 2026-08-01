@@ -1,0 +1,404 @@
+	@charset "UTF-8";
+	/* CSS Document */
+	
+	@font-face {
+	
+		 font-family:Gotham-Book;
+		 src: url(/fonts/Gotham-Book.otf) format("opentype");
+		
+	}
+	
+	
+	#ie a {color:white}
+	a{text-decoration:none;color:#004b8d};
+	a:hover{color:#ffd220;}
+	active{color:#ffd220;}
+	a.active{
+		color:#ffd220;
+		FONT-SIZE:22px;
+	}
+	
+	a:hover.inactive{color:#ffd220;}
+	a:hover.portfolio{color:#ffd220;}
+	a.portfolio{color:#004b8d}
+	body{
+	background:url(/images/clouds2.jpg) bottom fixed;
+	font-family:"Gotham-Book", Arial, Helvetica, "san serif";
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow:scroll;
+	margin-left:auto;
+	margin-right:auto;
+	background-repeat:repeat;
+	margin-bottom: 0px;
+	margin-top: 10px;
+	}
+	body .light{/*background:url("/images/bg_image_overlay_luminosity.jpg")*/ font-style:italic; }
+	img {
+	}
+	h2{
+		font-size:20px;
+		color: #004b8d;
+		margin-left: 5px;
+		margin-top: 0px;
+		padding-top: 5px;
+	}
+	
+	#animator{background-color:#ffd200; height:100%; width:10%; opacity:.5; position:absolute;}
+	#banner {
+    height: 90px;
+    padding-left: 10px;
+    padding-top: 0;
+	
+}
+#main ul{max-height:3000px;}
+#container {
+    margin-top: 65px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 90%;
+  margin-bottom: 5%;
+  padding: 0;
+  overflow-x: hidden;
+	
+}
+#main{
+	margin-right: auto;
+}	
+	#logo{
+	margin-top:7px;
+	background:url(/images/logo.png) no-repeat;
+	width:55px;
+	float:left;
+	margin-right:30px;
+	height: 75px;
+	background-repeat:no-repeat;
+	margin-right:0px;
+	}
+	#nav{
+	padding: 7px;
+	background: #f3ede1;
+	padding-left: 15px;
+	border: 1px solid #ffd220;
+	;
+	border-right: none;
+	;
+	border-left: none;
+	}
+	#nav li{
+	list-style-type:none;
+	display:inline;
+	padding:0px;
+	margin-right:12px;
+	border:none;
+	font-size:14px;
+	color: white;
+	margin-left: 12px;
+	}
+	#nav li a{
+	color:#004b8d;
+	letter-spacing: 1px;
+	}
+	#nav li a:hover{color:#ffd220;
+}
+	#nav li a.active{
+	color:#ffd220;
+	font-size:16px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	}
+	
+	.underline{
+		margin-left:10px;
+		border-bottom:1px solid #a5bfdc;
+		margin-bottom: 10px;
+	}
+	.nav_border_off{
+		border-bottom:none;f
+		padding-right:20px;
+		margin-top: 5px;
+	}
+	.nav_border_on{
+	border-bottom:3px solid #ffd220;
+	padding-right:15px;
+	margin-top: 1px;
+	}
+	
+	#content{
+	margin:auto;
+	float:left; width:90%; padding-left: 30px; padding-right: 30px;
+	}
+	
+	
+	#main_content_inner{
+	opacity: .95;
+	box-shadow: 5px 5px 5px #333333;
+	background:url(/images/bg_silouhette_internal4.png) white bottom fixed;
+	background-repeat:repeat-x;
+	border: 1px solid #306BA0;
+	padding-bottom: 0px;
+	width: 90%;
+	margin: auto;
+	}
+	#subnav{
+		float:left;
+		width:240px;
+		margin-right: 0px;
+		padding-right: 10px;
+	}
+	#subnav ul{padding:0px; margin:0px; color:white;
+		}
+	#subnav li{
+		list-style-type:none;
+		font-size:16px;
+		margin-bottom:10px;
+	}
+	subnav li.active{color:#ffd220;}
+	#subnav ul li ul li{
+		font-size:13px;
+		color:white;
+		margin-bottom:3px;
+		margin-top: 3px;
+	}
+	
+	
+	
+	
+	.main_content_gga{
+		float:left;
+		width:910px;
+		background:#004B8D;
+		border: 3px solid #ccc;
+		opacity: .97;
+	}
+		
+	
+		
+	#footer{
+	font-size:12px;
+	color:white;
+	margin-bottom:20px;
+	margin-top: 15%;
+	float: left;
+	width: 2%;
+	padding-right: 10px;
+	position: fixed;
+	z-index: 10;
+	}
+	
+	#home .smallbox{
+		width:291px;
+		height:350px;
+		margin:0px;
+		float: left;
+		opacity:1.0;
+		border-left: 1px dotted #ccc;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	
+	#home .largebox{
+		width: 583px;
+		float:left;
+		opacity:1;
+		height: 350px;
+	}
+	
+	#portfolio .smallbox{
+		width:310px;
+	
+		margin:0px;
+		float: left;
+		opacity:1.0;
+	}
+	
+	#portfolio .largebox{
+		width: 600px;
+		float:left;
+		opacity:1;
+		
+	}
+	ul li a{color:white;}
+	ul li a.off{color:#ffffff;}
+	ul li a.on{color:#ffd220;}
+	ul li ul li a{color:white;}
+	ul li ul li a.off:hover{color:#ffd220;}
+	ul li ul li a.on{color:#ffd220;}
+	ul li ul li a.off{color:#ffffff;}
+	
+	#portfolio{}
+	#bigimage{
+		float:left;
+		width: 660px;
+	}
+	#images{
+		background-color:white;
+		float: left;
+		width: 200px;
+	}
+	#image img {
+		border:1px solid #ccc;
+	
+	}
+	#white_box{
+		background-color: white;
+		border:7px solid #ccc;
+	}
+	
+	.header
+	{
+	width:100%;
+	background: white;
+	}
+	.header_text
+	{
+	font-size:24px;
+	letter-spacing: 10px;
+	color:#004b8d;
+	padding:20px;
+	float: left;
+	padding-bottom: 3px;
+	padding-top: 10px;
+	}
+	.header_text2
+	{
+	font-size:24px;
+	letter-spacing: 10px;
+	color:#ffd220;
+	float: left;
+	padding: 10px;
+	padding-bottom: 3px;
+	padding-top: 10px;
+	}
+	.header_border
+	{
+		border-bottom:2px solid #ffd220;
+		margin-bottom: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 2px;
+	}
+	.header_sub_text
+	{
+		font-size:14px;
+		color:#004b8d;
+		padding-left: 10px;
+		padding-bottom: 7px;
+	}
+	
+	.left_column
+	{
+		float:left;
+		width:290px;
+		
+		margin-top: 15px;
+		margin-left: 10px;
+		overflow: hidden;
+	}
+	
+	.right_column
+	
+	{
+		float:left;
+		width:550px;
+		margin-left:15px;
+		margin-top: 15px;
+		overflow: hidden;
+	}
+	.even_more_right_column
+	
+	{
+		float:left;
+		width:30px;
+		margin-left:10px;
+		margin-top: 225px;
+		overflow: hidden;
+		color: #ffd220;
+		font-size: 30px;
+		margin-bottom: 225px;
+	}
+	.big_image
+	{
+		border:1px #ccc solid;
+	}
+	.image1
+	{
+	border:1px solid #ffd220;height:150px;
+	overflow:hidden;
+	}
+	
+	.image2
+	{
+		border:1px #ccc solid;
+		margin-top:10px;
+		height:150px;
+		overflow:hidden;
+	}
+	
+	.image3
+	{
+		border:1px #ccc solid;
+		margin-top:10px;
+		height:150px;
+		overflow:hidden;
+	}
+	#web_design
+	{
+	display:block;
+	margin:20px;
+	border:1px solid #ccc;
+	min-height:400px;
+	width: 931px;
+	}
+	#main_image
+	{
+	float:left; padding-bottom:5px; padding-top:5px; padding-left:10px; padding-right:10px; width:840px;
+	}
+	.thumbnail
+	{
+	margin:10px;
+	}
+	#thumbnails img
+	{
+	border:1px solid #ccc;
+	}
+	
+	
+.hidden{
+	position:absolute;
+	background:white;
+	border:8px solid #E9E5DC;
+	display:none;
+	margin-top:-100px;
+	box-shadow: 5px 5px 5px #333333;
+}
+div.hidden img{
+}
+.showing{position:absolute;margin-left:-100px; background:white; border:1px solid #E9E5DCk;display:block;margin-top:-100px;box-shadow: 5px 5px 5px #999;}
+div.showing img{padding:20px;}
+.stage_container{
+ background: url("/images/bg_silouhette_internal5.png") repeat-x center bottom transparent;
+  height: 339px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+ }
+ .stage_container div{
+ 
+background-image:url('/images/clouds2.jpg')
+width: 100%;
+  position: fixed;
+  height: 100%;
+  opacity: .1;
+  z-index: -1;
+ } 
+ 
+ div .row {
+  margin: 0;
+}

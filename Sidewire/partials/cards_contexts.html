@@ -1,0 +1,175 @@
+<section ng-include="'partials/search_buttons.html'"></section>
+
+<section class="container" id="container" ng-model="viewButtons" >
+
+	<section id="movingBallG" ng-show="loading==true">
+		<section class="movingBallLineG"></section>
+		<section id="movingBallG_1" class="movingBallG"></section>
+	</section>
+	<!--------Cards View-------------->
+	<section id="table" ng- class="stage" id="state">
+		<section id="row">	
+			 <dl ng-repeat="item in adder.contexts track by $index" class="new contexts col-md-3" ng-hide="item.Edit==false" >
+				
+						<dt>
+							
+							<dd>
+								<label>Name:</label><input type="text" ng-model="item.name" ng-blur="createParserClass(item)" placeholder="Name" value="{{item.name}}"/>
+							</dd>
+							<dd>
+								<label>Id:</label>{{item.id}}
+							</dd>
+							<dd  class="contexts">
+								<label>Feed Url:</label><input type="url" ng-model="item.feed_url" placeholder="Feed Url" ng-model="item.feed_url"  value="{{item.feed_url}}" ng-blur="createDomain(item.feed_url, item)"  ng-change="checkInput(item.feed_url, $index,adder.contexts)" ng-delay="700"/><span class="red" ng-hide="item.httpThere==true">*Please add a properly formatted url.</span>
+							</dd>
+							<dd ng-show="item.Edit==true" class="contexts">
+								<label>Publication</label><input ng-model="item.publication" type="text" placeholder="Publication" value="{{item.publication}}"/>
+							</dd>
+							<dd class="contexts">
+								<label>Domain</label><input ng-model="item.domain" type="text" placeholder="Domain" value="{{item.domain}}"/>
+							</dd>
+							<dd class="contexts">
+								<label>Parser Class</label><input ng-model="item.parser_class" type="text" placeholder="Parser Class" value="{{item.parser_class}}"/>
+							</dd>
+							<dd class="contexts">
+								<label>Pas</label><input type="text" ng-model="item.pas" placeholder="Pas" value="{{item.pas}}"/>
+							</dd>
+							<dd class="contexts">
+								<label>Pas Std</label><input type="text"  ng-model="item.pas_std" placeholder="Pas Std" value="{{item.pas_std}}"/>
+							</dd>
+							<dd class="contexts">
+								<label>Twitter Handle</label><input type="text" ng-model="item.twitter_handle" placeholder="Pas Sdd" value="{{item.twitter_handle}}"/>
+							</dd>
+							<dd class="contexts" ng-click="changeCheck('article_whitelist', $index, adder.contexts)">
+								<label>Article Whitelist</label>
+								<span class="icon-checkbox-unchecked blue" ng-hide="item.article_whitelist==true" ng-model="item.article_whitelist"></span>
+								<span class="icon-checkbox-checked blue" ng-hide="item.article_whitelist==false" ng-model="item.article_whitelist"></span>
+								
+							</dd>
+							<dd class="contexts" ng-click="changeCheck('twitter_whitelist', $index, adder.contexts)">
+								<label>Twitter Whitelist</label>
+								<span class="icon-checkbox-unchecked blue" ng-hide="item.twitter_whitelist==true" ng-model="item.twitter_whitelist"></span>
+								<span class="icon-checkbox-checked blue" ng-hide="item.twitter_whitelist==false" ng-model="item.twitter_whitelist"></span>
+								
+							</dd>
+							<dd class="whitelist">
+								<label>CDN Domains</label><input type="text" ng-model="item.cdn_domains"  placeholder="CDN-Domains" value="{{item.cdn_domains.toString()}}"/>
+							</dd>
+							<dd class="card-button">
+								<span class="icon-floppy-disk"  ng-click="savItem($index, 'new');"></span>
+								<span class="icon-cancel-circle" ng-click="close($index)"></span>
+							</dd>
+						</dt>
+					</dl>
+	
+	
+		
+			
+
+				
+					<dl ng-repeat ="item in data.active track by $index" resize-card  class="col-md-3 contexts" class="card-text">
+						<dt >
+							
+							<dd ng-hide="item.Edit==true">
+								Name: {{item.name}}
+							</dd>
+							<dd  ng-hide="item.Edit==true">
+								Id: {{item.id}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Feed URL: <a href="{{item.feed_url}}" target="_blank">{{item.feed_url}}</a>
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Publication:{{item.publication}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Domain: {{item.domain}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Parser-Class: {{item.parser_class}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Pas: {{item.pas}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Pas-Std: {{item.pas_std}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Twitter-Handle: {{item.twitter_handle}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Article Whitelist: 
+								{{item.article_whitelist}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								Twitter-Whitelist: 
+								{{item.twitter_whitelist}}
+							</dd>
+							<dd ng-hide="item.Edit==true">
+								CDN-Domains: {{item.cdn_domains.toString()}}
+							</dd>
+							<dd class="card-button" ng-hide="item.Edit==true">
+								<span class="icon-pencil" ng-click="editItem($index)"></span>
+								<span class="icon-bin" ng-click="deleteItem($index)"></span>
+							</dd>
+					
+							<dd class="contexts" ng-hide="item.Edit==false">
+								<label>Id:</label>{{item.id}}
+							</dd>
+							
+							<dd  class="contexts" ng-hide="item.Edit==false">
+								<label>Name:</label><input type="text" ng-model="item.name" ng-blur="createParserClass(item)" placeholder="Name" value="{{item.name}}"/>
+							</dd>
+							
+							<dd  class="contexts"  ng-hide="item.Edit==false">
+								<label>Feed Url:</label><input type="url" ng-model="item.feed_url" placeholder="Feed Url" ng-model="item.feed_url"  value="{{item.feed_url}}" ng-blur="createDomain(item.feed_url, item)"  ng-change="checkInput(item.feed_url, $index,data.active)" ng-delay="700"/><span class="red" ng-hide="item.httpThere==true">*Please add a properly formatted url.</span>
+							</dd>
+							<dd ng-show="item.Edit==false" class="contexts"  ng-hide="item.Edit==false">
+								<label>Publication</label><input ng-model="item.publication" type="text" placeholder="Publication" value="{{item.publication}}"/>
+							</dd>
+							<dd class="contexts"  ng-hide="item.Edit==false">
+								<label>Domain</label><input ng-model="item.domain" type="text" placeholder="Domain" value="{{item.domain}}"/>
+							</dd>
+							<dd class="contexts"  ng-hide="item.Edit==false">
+								<label>Parser Class</label><input ng-model="item.parser_class" type="text" placeholder="Parser Class" value="{{item.parser_class}}"/>
+							</dd>
+							<dd class="contexts" ng-hide="item.Edit==false">
+								<label>Pas</label><input type="text" ng-model="item.pas" placeholder="Pas" value="{{item.pas}}"/>
+							</dd>
+							<dd class="contexts" ng-hide="item.Edit==false">
+								<label>Pas Std</label><input type="text"  ng-model="item.pas_std" placeholder="Pas Std" value="{{item.pas_std}}"/>
+							</dd>
+							<dd class="contexts" ng-hide="item.Edit==false">
+								<label>Twitter Handle</label><input type="text" ng-model="item.twitter_handle" placeholder="@Twitter" value="{{item.twitter_handle}}"/>
+							</dd>
+							<dd class="contexts" ng-click="changeCheck('article_whitelist', $index, data.active)"  ng-hide="item.Edit==false">
+								<label>Article Whitelist</label>
+								<span class="icon-checkbox-unchecked blue" ng-hide="item.article_whitelist==false" ng-model="item.article_whitelist"></span>
+								<span class="icon-checkbox-checked blue" ng-hide="item.article_whitelist==true"  ng-model="item.article_whitelist"></span>
+
+							</dd>
+							<dd class="contexts" ng-click="changeCheck('twitter_whitelist', $index, data.active)"  ng-hide="item.Edit==false">
+								<label>Twitter Whitelist</label>
+								<span class="icon-checkbox-unchecked blue" ng-hide="item.twitter_whitelist==false" ng-model="item.twitter_whitelist"></span>
+								<span class="icon-checkbox-checked blue" ng-hide="item.twitter_whitelist==true"  ng-model="item.twitter_whitelist"></span>
+							</dd>
+							<dd class="whitelist"  ng-hide="item.Edit==false">
+								<label>CDN Domains</label><input type="text" ng-model="item.cdn_domains"  placeholder="CDN-Domains" value="{{item.cdn_domains.toString()}}"/>
+							</dd>
+							<dd class="card-button"  ng-hide="item.Edit==false">
+								<span class="icon-floppy-disk" ng-click="savItem($index)"></span>
+								
+								<span class="icon-cancel-circle" ng-click="noEdit($index, item.id)"></span>
+							</dd>
+						</dt>
+					</dl>
+				</section>
+	
+			
+		<section class="clear"></section>
+		</section>
+	</section>
+
+
+
+<section class="clear"></section>

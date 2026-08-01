@@ -1,0 +1,434 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "Gotham-Book";
+    src: url("/fonts/Gotham-Book.otf") format("opentype");
+}
+#ie a {
+    color: white;
+}
+a {
+    color: #004B8D;
+    text-decoration: none;
+}
+active {
+    color: #FFD220;
+}
+a.active {
+    color: #FFD220;
+    font-size: 22px;
+}
+a.inactive:hover {
+    color: #FFD220;
+}
+a.portfolio:hover {
+    color: #FFD220;
+}
+a.portfolio {
+    color: #FFDD20;
+}
+body 
+{
+
+
+
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-color: transparent;
+    
+	/*background-image:url("/images/bg_image_overlay_luminosity.jpg");*/
+    background-origin: padding-box;
+    background-position: center bottom;
+	    background-size: cover;
+    font-family: "Gotham-Book",Arial,Helvetica,"san serif";
+    margin: 10px auto 0;
+    overflow: scroll;
+    width: 100%;
+	height:1500px;
+	z-index:-1;
+	
+}
+::-webkit-scrollbar {
+				width: 10px;
+				padding: 0px;
+			}/* this targets the default scrollbar (compulsory) */
+
+			::-webkit-scrollbar-track {
+				background-color: none;
+			}/* the new scrollbar will have a flat appearance with the set background color */
+			::-webkit-scrollbar-thumb {
+				background-color: #f0f0f0;
+				opacity: .1;
+			}/* this will style the thumb, ignoring the track */
+			::-webkit-scrollbar-thumb:hover {
+				background-color: #f8f8f8;
+				opacity: .8
+			}
+
+body .light {
+    font-style: italic;
+}
+img {
+  /*  border-bottom: 2px solid #222127;
+    border-left: 2px solid #222127;*/
+}
+h2 {
+    color: #004B8D;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 0;
+    padding-top: 5px;
+}
+#animator {
+    background-color: #FFD200;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    width: 10%;
+}
+#banner {
+    height: 90px;
+    padding-left: 10px;
+    padding-top: 0;
+	
+}
+#main ul{max-height:3000px;}
+#container {
+    background: url("/images/bg_silouhette_internal5.png") repeat-x left bottom transparent;
+    height: 339px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 100%;
+	position:fixed;
+	z-index:1;
+	bottom:0px;
+	
+}
+#main{
+	margin-right: auto;
+}
+
+#building{
+	position:fixed;
+	height:323px;
+	margin-left:-30px;
+	width:900px;
+	overflow:hidden;
+	z-index: 10000;
+}
+/*#contain{background: url("/images/bg_silouhette_internal4.png") repeat-x fixed left bottom transparent; width:100%;margin-left:-30px}*/
+#contain{position:absolute; top:0px; z-index:0;}
+#logo {
+    background: url("/images/logo.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 75px;
+    margin-right: 0;
+    margin-top: 7px;
+    width: 55px;
+}
+#nav {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #F3EDE1;
+    border-color: #FFD220 -moz-use-text-color;
+    border-image: none;
+    border-style: solid none;
+    border-width: 1px medium;
+    padding: 7px 7px 7px 15px;
+}
+#nav li {
+    border: medium none;
+    color: white;
+    display: inline;
+    font-size: 14px;
+    list-style-type: none;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 0;
+}
+#nav li a {
+    color: #004B8D;
+    letter-spacing: 1px;
+}
+#nav li a:hover {
+    color: #FFD220;
+}
+#nav li a.active {
+    color: #FFD220;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+.underline {
+    border-bottom: 1px solid #A5BFDC;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.nav_border_off {
+    border-bottom: medium none;
+    margin-top: 5px;
+}
+.nav_border_on {
+    border-bottom: 3px solid #FFD220;
+    margin-top: 1px;
+    padding-right: 15px;
+}
+#content {
+    float: left;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 90%;
+}
+#main_content_inner {
+    color: white;
+   /* margin: auto;*/
+    opacity: 0.95;
+    padding-bottom: 0px;
+    width: 90%;
+	
+	
+	
+}
+#portfolio{overflow-y:scroll;}
+#subnav {
+    float: left;
+    margin-right: 0;
+    padding-right: 10px;
+    width: 240px;
+}
+#subnav ul {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+#subnav li {
+    font-size: 16px;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+subnav li.active {
+    color: #FFD220;
+}
+#subnav ul li ul li {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+.main_content_gga {
+    background: none repeat scroll 0 0 #004B8D;
+    border: 3px solid #CCCCCC;
+    float: left;
+    opacity: 0.97;
+    width: 910px;
+}
+#footer {
+	color: white;
+	float: left;
+	font-size: 12px;
+	margin-bottom: 20px;
+	margin-top: 15%;
+	padding-right: 10px;
+	position: fixed;
+	width: 5%;
+	z-index: 10;
+}
+#home .smallbox {
+    border-left: 1px dotted #CCCCCC;
+    float: left;
+    height: 350px;
+    margin: 10px 0;
+    opacity: 1;
+    width: 291px;
+}
+#home .largebox {
+    float: left;
+    height: 350px;
+    opacity: 1;
+    width: 583px;
+}
+#portfolio .smallbox {
+    float: left;
+    margin: 0;
+    opacity: 1;
+    width: 310px;
+}
+#portfolio .largebox {
+    float: left;
+    opacity: 1;
+    width: 600px;
+}
+ul li a {
+    color: white;
+}
+ul li a.off {
+    color: #FFFFFF;
+}
+ul li a.on {
+    color: #FFD220;
+}
+ul li ul li a {
+    color: white;
+}
+ul li ul li a.off:hover {
+    color: #FFD220;
+}
+ul li ul li a.on {
+    color: #FFD220;
+}
+ul li ul li a.off {
+    color: #FFFFFF;
+}
+#portfolio {
+}
+#bigimage {
+    float: left;
+    width: 660px;
+}
+#images {
+    background-color: white;
+    float: left;
+    width: 200px;
+}
+#image img {
+    border: 1px solid #CCCCCC;
+}
+#white_box {
+    background-color: white;
+    border: 7px solid #CCCCCC;
+}
+.header {
+    background: none repeat scroll 0 0 white;
+    width: 100%;
+}
+.header_text {
+    color: #004B8D;
+    float: left;
+    font-size: 24px;
+    letter-spacing: 10px;
+    padding: 10px 20px 3px;
+}
+.header_text2 {
+    color: #FFD220;
+    float: left;
+    font-size: 24px;
+    letter-spacing: 10px;
+    padding: 10px 10px 3px;
+}
+.header_border {
+    border-bottom: 2px solid #FFD220;
+    margin: 2px 10px 10px;
+}
+.header_sub_text {
+    color: #004B8D;
+    font-size: 14px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+}
+.left_column {
+    float: left;
+    margin-left: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    width: 290px;
+}
+.right_column {
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+    overflow: hidden;
+    width: 550px;
+}
+.even_more_right_column {
+    color: #FFD220;
+    float: left;
+    font-size: 30px;
+    margin-bottom: 225px;
+    margin-left: 10px;
+    margin-top: 225px;
+    overflow: hidden;
+    width: 30px;
+}
+.big_image {
+    border: 1px solid #CCCCCC;
+}
+.image1 {
+    border: 1px solid #FFD220;
+    height: 150px;
+    overflow: hidden;
+}
+.image2 {
+    border: 1px solid #CCCCCC;
+    height: 150px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.image3 {
+    border: 1px solid #CCCCCC;
+    height: 150px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+#web_design {
+    border: 1px solid #CCCCCC;
+    display: block;
+    margin: 20px;
+    min-height: 400px;
+    width: 931px;
+}
+#main_image {
+    float: left;
+    padding: 5px 10px;
+    width: 840px;
+}
+.thumbnail {
+    margin: 10px;
+}
+#thumbnails img {
+    border: 1px solid #CCCCCC;
+}
+.hidden {
+    background: none repeat scroll 0 0 white;
+    border: 8px solid #E9E5DC;
+    box-shadow: 5px 5px 5px #333333;
+    display: none;
+    position: absolute;
+top: 50px;
+}
+div.hidden img {
+}
+.showing {
+    background: none repeat scroll 0 0 white;
+    box-shadow: 5px 5px 5px #999999;
+    display: block;
+    margin-left: -100px;
+    margin-top: -100px;
+    position: absolute;
+}
+div.showing img {
+    padding: 20px;
+}
+#clear{clear:both}
+
+
+.stage_container{
+	  background: url("/images/bg_silouhette_internal5.png") repeat-x left bottom transparent;
+  height: 339px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+ }
+ .stage_container div{
+ 
+	background-image:url('/images/clouds2.jpg');
+	width: 100%;
+  position: fixed;
+  height: 100%;
+  opacity: .1;
+  z-index: -1;
+ } 

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* CSS Document */
+	
+	body{font-family:Arial, Helvetica, sans-serif}
+	#sauare_blue{border:3px solid #0057a5;width: 157px; height: 118px; background-image:url('http://teacheratsea.files.wordpress.com/2013/01/allfacts_marks1.jpg?w=157') }
+	#sauare_blue{border:3px solid #0057a5;width: 157px; height: 118px; background-image:url('http://teacheratsea.files.wordpress.com/2013/01/allfacts_marks2.jpg?w=157') }
+	#hidden {display:none; font-size:12px; color:#0057a5; opacity:.85;border-top:1px solid #ccc;padding-top:5px; }

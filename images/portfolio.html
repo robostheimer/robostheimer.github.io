@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TAS_Site" >
+	<head>
+		<title>Big City Blinking Web Development</title>
+		<style>
+			@font-face {
+    	font-family: "Gotham-Book";
+    	src: url("../fonts/Gotham-Book.otf") format("opentype");
+			}
+			body {
+				font-family: "Gotham-Book",Arial,Helvetica,"san serif";
+				padding: 0;
+				margin: 0;
+				color: white;
+				font-size: 16px;
+			}
+			h2 { 
+				font-weight: normal;
+				color: rgb(252, 208, 60);
+				font-size: 2.75rem;
+			}
+			header {
+				width: 100%;
+				position: fixed;
+				background-size: cover;
+			  background-attachment: fixed;
+			  background-position: center bottom;
+			  background-blend-mode: screen;
+			  background-image: url('images/background/371545466_a8e455a4d0_o_bw.jpg');
+			  background-color: rgba(22, 21, 27, .9);
+			  height: 125px;
+			  z-index: 1
+
+			}
+
+			nav ul {
+					
+					list-style: none;
+					position: absolute;
+					right: 15px;
+					top: 15px
+				}
+
+				nav ul li {
+					display: inline-block;
+					margin-right: 20px;
+
+				}
+				nav ul li button {
+					background: none;
+					border: none;
+					color: rgb(252, 208, 60);
+					font-size: 1rem;
+				}
+				nav ul li.active{
+					border-bottom: 1px solid rgb(252, 208, 60);
+					padding-left: 5px;	
+					padding-right: 5px;
+					padding-bottom: 10px;	
+				}
+			
+				.logo {
+					width: 200px;
+					height: 100px;
+					background-image: url('images/logos/BCBLogo_md.png');
+					background-repeat: no-repeat;
+					overflow: hidden;
+					margin: 15px;
+					position: absolute;
+					left: 0
+				}
+				
+			.splash {
+				width: 100%;
+				position: relative;
+				min-height: 100vh;
+			  background-size: cover;
+			  background-attachment: fixed;
+			  z-index: -1;
+			  background-position: center bottom;
+			  background-blend-mode: screen;
+			  background-image: url('images/background/371545466_a8e455a4d0_o_bw.jpg');
+			  background-color: rgba(22, 21, 27, .9);
+			}
+				.motto {
+					position: absolute;
+					top: 78%;
+					left: 50%;
+					padding: 30px;
+					transform: translate(-50%,-50%);
+					width: 40%;
+					text-align: center;
+					padding: 20px;
+					border-top: 2px solid white;
+					border-bottom: 2px solid white;
+					/*background: rgba(30, 30, 30, .2);*/
+				}
+
+				.motto h2 {
+					margin: 0;
+				}
+				.motto p {
+					font-size: 1.0rem;
+					text-align: left;
+				}
+
+				.splash footer {
+					position: absolute;
+					bottom: 15px;
+					font-size: .6rem;
+					background: none;
+					padding: 0;
+				}
+
+		.project {
+			width: 65%;
+			margin: auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			position: relative;
+			border-bottom: 3px solid rgb(12, 64, 108);
+			margin-bottom: 15px
+			padding-bottom: 15px;
+		}	
+		.project:last-child {
+			border: none;
+		}
+			.project div {
+				display: table;
+			}
+				.project h3 {
+			    font-size: 2rem;
+			    font-family: 'Marcellus SC', serif;
+			    margin-bottom: 15px;
+			    margin-left: 15px;
+			    color: rgb(12, 64, 108);
+				}
+
+				.project p{
+					padding-left: 30px;
+					color: #858585;
+					display: table-cell;
+					vertical-align: top;
+					padding-top: 10px
+				}
+
+				.project img {
+					display: table-cell;
+					padding: 7px;
+					vertical-align: top;
+				}
+				.project div {
+					width: 100%;
+					height: 25vh;
+					padding: 30px;
+				}
+
+				.project a{
+					padding: 7px;
+					color: rgb(12, 64, 108);
+					border: 2px solid rgb(12, 64, 108);
+					text-decoration: none;
+					border-radius: 6px;
+				}
+
+				.project a:hover {
+					text-decoration: underline;
+					color: rgb(252, 208, 60);
+					border-color: rgb(252, 208, 60);
+				}
+
+
+		footer {
+			background-color: rgb(12, 64, 108);
+			color: white;
+			font-size: 1em;
+			padding: 30px;
+			width: 100%;
+			}
+
+			footer ul {
+				width: 240px;
+				margin-left: auto;
+				margin-right: auto;
+				font-size: 2rem;
+			}
+			footer ul li {
+				display: inline-block;
+				list-style: none;
+				padding: 10px;
+			}
+
+			footer ul li a {
+				text-decoration: none;
+				color: white;
+			}
+
+			footer ul li a:hover {
+				font-size: 2.15rem;
+				color: rgb(252, 208, 60);
+			}
+
+
+		.tag {
+			border-radius: 5px;
+			background-color: rgb(12, 64, 108);
+			color: white;
+			font-size: .85em;
+			padding: 4px;
+			margin: 4px;
+			display: inline-block;
+		}
+		.emphasis {
+			color: white;
+			font-weight: 300;
+		}
+
+
+		</style>
+		<link href="http://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Marcellus+SC|Mate:400,400italic|Crete+Round:400,400italic|Bree+Serif,' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700|Roboto:400,400italic,500,500italic,700,700italic,900italic,300italic,300,100italic,100|Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="font.css" >
+	</head>
+
+	<body>
+	<header>
+		<div class="logo"></div>
+		<!--<nav>
+			<ul>
+				<li class="active"><button>Projects</button></li>
+				<li><button>About</button></li>
+				<li><button>Contact<button></li>
+			</ul>
+		</nav>-->
+	</header>
+	
+	<section class="splash">
+		<div class="motto">
+			<h2>Making <span class="emphasis">Web Apps that </span> Shine</h2>
+			<p>Hello! My name is Rob Ostheimer. I am a frontend Web/Interactive Designer with over 10 yearsexperience managing the web presence of large government and non-
+			government organizations.  I am interested in developing Rich Interactive experiences that leverage a user's geolocation. Currently, I am currently working on a location-based Music Discovery app which makes music recommendations based on a user's geolocation.</p>
+		</div>
+		<footer>
+	Special thanks to Aaron Wood for use of his great photo of the San Francisco at night.
+	</footer>
+	</section>
+	<section class="portfolio">
+		<div class="project">
+			<h3 class="blue">Music Where You Are</h3>
+			<div>
+				<img src="images/screenshots/mwya.png" width="250" height="188"/>
+				<p>Ever wonder what artists are from where you happen to be?  I did, while driving to Minneapolis from Washington, DC.  From this kernel of an idea, an app was born. Using Geolocation information from devices like the smart phone in your pocket or user-typed information, Music Where You Are will find songs by artists from where you happen to be at that moment.  After the app has figured out Where You Are, it loads two Spotify playlists (one that includes artists from your geolocation, the other which loads songs about your geolocation). Users can filter songs by genre and/or era, add songs, to a "Favorites" playlist, and share that playlist via Twitter, Facebook, Spotify, and Google+, and find out about concerts/shows in locations by pressing the calendar icon. Music Where You Are is responsively designed web app.
+					<br><br><br>
+					<a href="http://musicwhereyour.com" target="_blank">Check out App</a>
+					<br><br>
+					<span class="tag">Illustrator</span><span class="tag">CSS</span> <span class="tag">Javascript</span> <span class="tag">AngularJS</span> <span class="tag">HTML</span> <span class="tag">JSON</span> <span class="tag">Google Fusion Tables</span> <span class="tag">Echonest API</span> <span class="tag">Spotify API</span> <span class="tag">JQuery</span><span class="tag">Leaflet API</span> <span class="tag">Responsive Web Design</span>
+					</p>
+			</div>
+			
+		</div>
+
+		<div class="project">
+			<h3 class="blue">Contact Management Web App</h3>
+			<div>
+				<img src="images/screenshots/Contact-Manager-App.png" width="250" height="188"/>
+				<p>A Bay Area based startup needed a Contact Management app designed to add, organize and quickly browse for contacts in their database.  I developed this fully-responsive Contact Management App to allow for easy editing, adding to and looking up from their database.  The app features the capability to look at the data in multiple views and to upload and download the data in JSON format for easy integration into a backend database. Additionally, it has a robust filtering/search engine and the capability to sort your views based on multiple factors.
+					<br><br><br>
+					<a href="/Sidewire/" target="_blank">Check out the App</a>
+					<br><br>
+					<span class="tag">CSS</span> <span class="tag">Javascript</span> <span class="tag">AngularJS</span> <span class="tag">HTML</span><span class="tag">JSON</span> <span class="tag">JQuery</span> <span class="tag">Responsive Web Design</span>
+				</p>
+		</div>	
+		</div>
+
+		<div class="project">
+			<div>
+			<h3 class="blue">Teacher at Sea 25th Anniversary Site</h3>
+			<div>
+				<img src="images/screenshots/TAS-25th.png" width="250" height="141"/>
+				<p>The NOAA Teacher at Sea Program (TAS) celebrated its 25th Anniversary in 2015. To commemorate the even, I was commissioned to create an <em>interactive</em> timeline.  Over 25 years, TAS had accumulated thousands of science blogposts and images while sending over 700 teachers out to sea.  This site uses a card design to allow the user to flip move through the years of the TAS program's history.  Featuring over 500 card, this site creates creates a unique tapestry of the program's history. 
+					<br><br><br>
+					<a href="http://teacheratsea.noaa.gov/25thAnniversary" target="_blank">Check out the App</a>
+					<br><br>
+					<span class="tag">CSS</span> <span class="tag">Javascript</span> <span class="tag">AngularJS</span> <span class="tag">HTML</span><span class="tag">JSON</span> <span class="tag">JQuery</span> <span class="tag">Responsive Web Design</span>
+				</p>
+		</div>	
+			
+		</div>	
+		</div>
+
+		<div class="project">
+			<div>
+			<h3 class="blue">Teacher at Sea 25th Anniversary Site</h3>
+			<div>
+				<img src="images/screenshots/TAS.png" width="250" height="174"/>
+				<p>Recently retrofitted to be responsive, this is the website for NOAA's Teacherat Sea Program. It includes the integration of Twitter, Flickr, WordPress and youtube API's to highlight the program's social media presence. There is a impressive amount of integration with the program's WordPress blogs. Using AngularJS in combination with Atom feeds produced from Google Spreadsheets and the RSS feed from the Teacher at Sea WordPress Blog to connect to the WordPress blog as a "Database/CMS", I used Jquery/Javascript to parses this information and populate the website with content. Additionally the site provides a PHP search interface which allows users to search for photos and blog posts from the Teacher at Sea WordPress blog.
+					<br><br><br>
+					<a href="http://teacheratsea.noaa.gov/" target="_blank">Check out the App</a>
+					<br><br>
+					<span class="tag">CSS</span> <span class="tag">Javascript</span> <span class="tag">AngularJS</span> <span class="tag">HTML</span><span class="tag">JSON</span> <span class="tag">JQuery</span> <span class="tag">Responsive Web Design</span>
+				</p>
+			</div>	
+		</div>
+	</section>
+
+	<!-- <section class="about">
+
+	</section>
+
+	<section class="contact">
+
+	</section> -->
+	<footer>
+			<ul>
+				<li><a href="mailto:rob.ostheimer@gmail.com?Subject=Let's Chat!"><span class="icon-envelope"></span></a></li>
+				<li><a href="http://github.com/robostheimer" target="_blank"><span class="icon-github"></span></a></li>
+				<li><a href="http://twitter.com/robostheimer" target="_blank"><span class="icon-uni5E"></span></a></li>
+				<li><a href="https://www.linkedin.com/in/rob-ostheimer-79b3729" target="_blank"><span class="icon-linkedin"></span></a></li>
+				
+	</footer>
+
+	</body>

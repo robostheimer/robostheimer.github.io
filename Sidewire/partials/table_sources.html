@@ -1,0 +1,100 @@
+<section ng-include="'partials/search_buttons.html'"></section>
+
+
+<section class="container" id="container">
+	<!--------List View-------------->
+	<section id="movingBallG" ng-show="loading==true">
+		<section class="movingBallLineG"></section>
+		<section id="movingBallG_1" class="movingBallG"></section>
+	</section>
+	<section id="nofilter-list"  class="stage" id="stage" >
+		<section id= "table" ng-hide="loading==true" id="row" >
+
+			<table>
+				<thead >
+					
+					<tr >
+						<th  ng-repeat="item in active_types">{{item.typey.replace('_', ' ').toTitleCase()}}</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					 <tr ng-show="item.show=true" ng-repeat="item in adder.sources  track by $index">
+					 
+					 	<td class="sources" >
+						<input type="text" ng-model="item.name" ng-blur="createParserClass(item)" placeholder="Name" value="{{item.name}}"/>
+						</td>
+							<td  class="sources">{{item.id}}</td>
+						<td  class="sources">
+							<input type="url" ng-model="item.feed_url" placeholder="Feed Url" ng-model="item.feed_url"  value="{{item.feed_url}}" ng-change="checkInput(item.feed_url, $index, adder.sources)" ng-delay="700"/><span class="red" ng-hide="item.httpThere==true">*Please add a properly formatted url.</span>
+						</td>
+						<td  class="sources">
+						<input type="text" ng-model="item.domain" placeholder="Domain" value="{{item.domain}}"/>
+						</td>
+						<td  class="sources">
+						<input type="text" ng-model="item.parser_class" placeholder="Parser Class" value="{{item.parser_class}}"/>
+						</td>
+						<td  class="sources">
+						<input type="text" ng-model="item.cdn_domains" placeholder="CDN-Domains" value="{{item.cdn_domains.toString()}}"/>
+						</td>
+						<td  class="whitelist sources" >
+							
+								<span class="icon-checkbox-unchecked blue" ng-hide="item.whitelist==true" ng-model="item.whitelist"  ng-click="changeCheck('whitelist', $index, adder.sources)"></span>
+								<span class="icon-checkbox-checked blue" ng-hide="item.whitelist==false"  ng-model="item.whitelist" ng-click="changeCheck('whitelist', $index, adder.sources)"></span>
+						<section class="show_icons">
+							<span class="icon-floppy-disk" ng-click="savItem($index, 'new')"></span>
+							<span class="icon-cancel-circle" ng-click="close($index)"></span>
+						</section></td> 
+					 </tr>
+					<tr  ng-repeat = "item in data.active track by $index">
+						
+						<td ng-hide="item.Edit==true;" class="sources">{{item.name}} </td>
+						<td  class="sources">{{item.id}}</td>
+						<td ng-hide="item.Edit==true;" class="sources url"><a href="{{item.feed_url}}" target="_blank">{{item.feed_url}}</a></td>
+						<td ng-hide="item.Edit==true;"  class="sources" >{{item.domain}}</td>
+						<td ng-hide="item.Edit==true;" class="sources" >{{item.parser_class}}</td>
+						<td ng-hide="item.Edit==true;" class="sources" >{{item.cdn_domains.toString()}}</td>
+						<td ng-hide="item.Edit==true;"  class="sources whitelist" >
+							{{item.whitelist}}
+						<section ng-hide="showEditIcons==false">
+							<span class="icon-pencil" ng-click="editItem($index)"></span>
+								<span class="icon-bin" ng-click="deleteItem($index)"></span>
+						
+
+						</section></td>
+						<td ng-show="item.Edit==true" class="sources" >
+							
+						<input type="text" ng-model="item.name" ng-blur="createParserClass(item)" placeholder="Name" value="{{item.name}}"/>
+						</td>
+						
+						<td ng-show="item.Edit==true" class="sources">
+							<input type="url" ng-model="item.feed_url" placeholder="Feed Url" ng-model="item.feed_url"  value="{{item.feed_url}}" ng-change="checkInput(item.feed_url, $index, data.active)" ng-delay="700"/><span class="red" ng-hide="item.httpThere==true">*Please add a properly formatted url.</span>
+						</td>
+						<td ng-show="item.Edit==true" class="sources">
+						<input type="text" ng-model="item.domain" placeholder="Domain" value="{{item.domain}}"/>
+						</td>
+						<td ng-show="item.Edit==true" class="sources">
+						<input type="text" ng-model="item.parser_class" placeholder="Parser Class" value="{{item.parser_class}}"/>
+						</td>
+						<td ng-show="item.Edit==true" class="sources">
+						<input type="text" ng-model="item.cdn_domains" placeholder="CDN-Domains" value="{{item.cdn_domains.toString()}}"/>
+						</td>
+						<td ng-show="item.Edit==true" class="whitelist sources">
+								<span class="icon-checkbox-unchecked blue" ng-hide="item.whitelist==true" ng-model="item.whitelist"  ng-click="changeCheck('whitelist', $index, data.active)"></span>
+								<span class="icon-checkbox-checked blue" ng-hide="item.whitelist==false"  ng-model="item.whitelist" ng-click="changeCheck('whitelist', $index, data.active)"></span>
+
+						<section class="show_icons">
+							<span class="icon-floppy-disk" ng-click="savItem($index)"></span>
+								<span class="icon-cancel-circle" ng-click="noEdit($index, item.id)"></span>
+						
+						</section></td>
+
+					</tr>
+
+				</tbody>
+			</table>
+		</section>
+
+	</section>
+
+</section>
