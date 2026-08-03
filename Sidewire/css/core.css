@@ -1969,9 +1969,7 @@ table {
 			border-radius: 8px;
 			box-shadow: 0 1px 3px rgba(20, 30, 45, .08);
 			color: #2B3646;
-			height: 300px;
 			padding: 1.1rem;
-			overflow-y: auto;
 			transition: transform .18s ease, box-shadow .18s ease, border-left-color .18s ease;
 		}
 		dl.col-md-3.sources:hover,
@@ -2006,13 +2004,10 @@ table {
 			dt .card-text h3{margin:0}
 			dd.card-button{
 			 font-size: 12px;
-			  overflow: hidden;
-			   position:absolute;
+			  overflow: visible;
 			  box-shadow: none;
-			 bottom:10px;
-			 width:90%;
-
-
+			 margin-top:10px;
+			 width:100%;
 			 }
 			  .card-button button{
 			  	border-radius: 5px;
