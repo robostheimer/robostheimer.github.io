@@ -223,10 +223,11 @@ section.buttons_holder{
 				
 .container{
   width: 100%;
-  height: calc(100vh - 170px);
+  min-height: calc(100vh - 170px);
   margin-bottom: 5%;
   padding: 0;
   overflow-x: hidden;
+  overflow-y: visible;
   margin-top: 20px;
   }
 .wrapper {
@@ -236,11 +237,11 @@ section.buttons_holder{
   margin-left: calc(5vw + 3.5rem); }
 .stage{
 	width: 100%;
-  overflow-y: hidden;
+  overflow-y: visible;
   overflow-x: hidden;
-  height: 100%;
+  height: auto;
   margin-top: 20px;
-}  
+}
 
 @media (max-width: 100rem) {
   .wrapper {
