@@ -1958,6 +1958,11 @@ table {
 	dl.col-md-3.sources,
 	 dl.col-md-3.contexts {
 
+			/* Bootstrap 3's own .col-md-3 (loaded separately) sets
+			   width:25%/float:left; neutralize both so these behave as
+			   plain grid items and stretch to fill their .card-grid cell. */
+			float: none;
+			width: 100%;
 			background: #ffffff;
 			border: 1px solid #E2E5EA;
 			border-left: 4px solid #4C6E96;
