@@ -30,25 +30,27 @@
 	<section ng-repeat="item in navButtons"  class="button {{item.state}}" ng-click="changeState(item.name)">
 		<a href="{{item.href}}">{{item.name}}</a>
 	</section>
-	<section class="action_buttons"  download-button data="{{dataCopy}}">
-	</section>
-	<section class="action_buttons"  ng-click ="runPost(data)">
-		<span class="icon-folder-upload"></span>
-	</section>
-	<section class="action_buttons"  ng-click="codeToggle()">
-		<span class="icon-embed"></span>
-		
-	</section>
-	<section ng-show="showJSON==true" class="code" >
-			<section class="close" ng-click="codeToggle()" ><span class="icon-cancel-circle" ></span></section>
-			<section class="close" download-button data={{data}}></section>
-			<pre>
-				{{dataCopy}}
-			</pre>
-			
+	<section class="action_buttons_group">
+		<section class="action_buttons" title="Download" download-button data="{{dataCopy}}">
 		</section>
-	<section class="action_buttons"  ng-click="addItem()">
-		<span class="icon-plus"></span>
+		<section class="action_buttons" title="Import" ng-click ="runPost(data)">
+			<span class="icon-folder-upload"></span>
+		</section>
+		<section class="action_buttons" title="View JSON" ng-click="codeToggle()">
+			<span class="icon-embed"></span>
+
+		</section>
+		<section ng-show="showJSON==true" class="code" >
+				<section class="close" ng-click="codeToggle()" ><span class="icon-cancel-circle" ></span></section>
+				<section class="close" download-button data={{data}}></section>
+				<pre>
+					{{dataCopy}}
+				</pre>
+
+			</section>
+		<section class="action_buttons" title="Add new" ng-click="addItem()">
+			<span class="icon-plus"></span>
+		</section>
 	</section>
 
 </section>
