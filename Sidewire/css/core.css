@@ -152,11 +152,9 @@ section.buttons_holder{
 	align-items:center;
 	gap:.4rem;
 	margin:1%;
-	margin-top:75px;
+	margin-top:85px;
 	width:100%;
 	background:white;
-	position:fixed;
-	z-index:1000;
 	padding-top:2%;
 }
 	section.button{
@@ -180,15 +178,15 @@ section.buttons_holder{
 			color:#6E8CAE;
 			text-decoration:none;
 		}
-		.action_buttons_group{display:flex; align-items:center; gap:.15rem; margin-left:auto;}
+		.action_buttons_group{display:flex; align-items:center; gap:8px; margin-left:auto;}
 		.action_buttons{
 			display:flex;
 			align-items:center;
 			justify-content:center;
-			width:34px;
-			height:34px;
+			width:40px;
+			height:40px;
 			border-radius:50%;
-			font-size:1.05rem;
+			font-size:20px;
 			color:#6E8CAE;
 			cursor:pointer;
 			transition:background-color .15s ease, color .15s ease;
@@ -225,11 +223,11 @@ section.buttons_holder{
 				
 .container{
   width: 100%;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 170px);
   margin-bottom: 5%;
   padding: 0;
   overflow-x: hidden;
-  margin-top: 120px;
+  margin-top: 20px;
   }
 .wrapper {
   margin: 0;
@@ -1994,7 +1992,7 @@ table {
 		.card-grid{
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-			gap: 1.5rem;
+			gap: 24px;
 			padding: 1% 1.5%;
 			align-items: start;
 		}
@@ -2028,13 +2026,13 @@ table {
 		dl.col-md-3.sources, dl.col-md-3.contexts{position:relative;}
 		dd.card-head{display:flex; align-items:center; gap:10px; margin-bottom:6px; margin-top:14px; padding-right:46px; overflow:visible;}
 		dd.card-head .card-favicon{width:28px; height:28px; border-radius:6px; flex-shrink:0; background:#F1F3F6; object-fit:cover;}
-		dd.card-head .card-title{font-size:1.5rem; font-weight:700; color:#2B3646; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-		dd.card-head .card-title input{font-size:1.05rem; font-weight:700;}
-		dd.card-id{position:absolute; top:1.25%; right:1.25%; font-size:.7rem; font-weight:600; letter-spacing:.03em; color:#8A93A3; background:#F1F3F6; border-radius:10px; padding:2px 8px; width:auto; overflow:visible;}
+		dd.card-head .card-title{font-size:16px; font-weight:700; color:#2B3646; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+		dd.card-head .card-title input{font-size:15px; font-weight:700;}
+		dd.card-id{position:absolute; top:1.25%; right:1.25%; font-size:11px; font-weight:600; letter-spacing:.03em; color:#8A93A3; background:#F1F3F6; border-radius:10px; padding:2px 8px; width:auto; overflow:visible;}
 		.field-row{margin-bottom:4px;}
-		.field-row label{display:block; width:auto; font-size:.68rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#8A93A3; margin-bottom:1px;}
-		.field-row .mono{font-family:'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size:.82rem; background:#F1F3F6; color:#40506B; padding:1px 5px; border-radius:4px; word-break:break-all;}
-		.whitelist-badge{display:inline-flex; align-items:center; gap:5px; font-size:.72rem; font-weight:700; letter-spacing:.03em; padding:3px 10px; border-radius:12px; cursor:pointer;}
+		.field-row label{display:block; width:auto; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#8A93A3; margin-bottom:1px;}
+		.field-row .mono{font-family:'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size:12px; background:#F1F3F6; color:#40506B; padding:1px 5px; border-radius:4px; word-break:break-all;}
+		.whitelist-badge{display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:700; letter-spacing:.03em; padding:3px 10px; border-radius:12px; cursor:pointer;}
 		.whitelist-badge.is-true{background:#DDF5E4; color:#1E8E4E;}
 		.whitelist-badge.is-false{background:#EDEFF2; color:#7A8494;}
 		dd.card-button span{display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:50%; transition:background-color .15s ease, color .15s ease; cursor:pointer;}
