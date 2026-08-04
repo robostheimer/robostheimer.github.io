@@ -70,43 +70,36 @@
 					<dl ng-repeat ="item in data.active track by $index" resize-card  class="col-md-3 contexts">
 						<dt class="card-text">
 
-							<dd ng-hide="item.Edit==true">
-								Name: {{item.name}}
+							<dd ng-hide="item.Edit==true" class="card-id">ID {{item.id}}</dd>
+							<dd ng-hide="item.Edit==true" class="card-head">
+								<img ng-src="https://www.google.com/s2/favicons?sz=64&domain={{item.domain}}" class="card-favicon" alt=""/>
+								<span class="card-title">{{item.name}}</span>
 							</dd>
-							<dd  ng-hide="item.Edit==true">
-								Id: {{item.id}}
+							<dd ng-hide="item.Edit==true" class="field-row">
+								<label>Feed URL</label> <a href="{{item.feed_url}}" target="_blank">{{item.feed_url}}</a>
 							</dd>
-							<dd ng-hide="item.Edit==true">
-								Feed URL: <a href="{{item.feed_url}}" target="_blank">{{item.feed_url}}</a>
+							<dd ng-hide="item.Edit==true" class="field-row">
+								<label>Publication</label> {{item.publication}}
 							</dd>
-							<dd ng-hide="item.Edit==true">
-								Publication:{{item.publication}}
+							<dd ng-hide="item.Edit==true" class="field-row">
+								<label>Domain</label> {{item.domain}}
 							</dd>
-							<dd ng-hide="item.Edit==true">
-								Domain: {{item.domain}}
+							<dd ng-hide="item.Edit==true" class="field-row">
+								<label>Parser Class</label> <span class="mono">{{item.parser_class}}</span>
 							</dd>
-							<dd ng-hide="item.Edit==true">
-								Parser-Class: {{item.parser_class}}
+							<dd ng-hide="item.Edit==true" class="field-row">
+								<label>Pas / Pas Std</label> {{item.pas}} / {{item.pas_std}}
 							</dd>
-							<dd ng-hide="item.Edit==true">
-								Pas: {{item.pas}}
+							<dd ng-hide="item.Edit==true" class="field-row">
+								<label>Twitter Handle</label> {{item.twitter_handle}}
 							</dd>
-							<dd ng-hide="item.Edit==true">
-								Pas-Std: {{item.pas_std}}
+							<dd ng-hide="item.Edit==true" class="field-row">
+								<label>CDN Domains</label> <span class="mono">{{item.cdn_domains.toString()}}</span>
 							</dd>
-							<dd ng-hide="item.Edit==true">
-								Twitter-Handle: {{item.twitter_handle}}
-							</dd>
-							<dd ng-hide="item.Edit==true">
-								Article Whitelist: 
-								{{item.article_whitelist}}
-							</dd>
-							<dd ng-hide="item.Edit==true">
-								Twitter-Whitelist: 
-								{{item.twitter_whitelist}}
-							</dd>
-							<dd ng-hide="item.Edit==true">
-								CDN-Domains: {{item.cdn_domains.toString()}}
+							<dd ng-hide="item.Edit==true" class="field-row">
+								<label>Whitelist</label>
+								<span class="whitelist-badge" ng-class="item.article_whitelist==true ? 'is-true' : 'is-false'">Article: {{item.article_whitelist==true ? 'Yes' : 'No'}}</span>
+								<span class="whitelist-badge" ng-class="item.twitter_whitelist==true ? 'is-true' : 'is-false'">Twitter: {{item.twitter_whitelist==true ? 'Yes' : 'No'}}</span>
 							</dd>
 							<dd class="card-button" ng-hide="item.Edit==true">
 								<span class="icon-pencil" ng-click="editItem($index)"></span>
