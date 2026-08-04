@@ -153,7 +153,7 @@ section.buttons_holder{
 	gap:.4rem;
 	margin:1%;
 	margin-top:85px;
-	width:100%;
+	width: calc(100% - 24px);
 	background:white;
 	padding-top:2%;
 }

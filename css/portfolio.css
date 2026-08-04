@@ -71,6 +71,19 @@ nav ul li.active {
   left: 0
 }
 
+.logo_mark {
+   width: 200px;
+  height: 100px;
+  background-image: url('../images/logos/BCB_mark.png');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: 15px;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 0
+}
+  
+
 .splash {
   width: 100%;
   position: relative;
