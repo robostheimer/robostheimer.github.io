@@ -1964,7 +1964,7 @@ table {
 			border-radius: 8px;
 			box-shadow: 0 1px 3px rgba(20, 30, 45, .08);
 			color: #2B3646;
-			padding: 1.1rem;
+			padding: 18px;
 			transition: transform .18s ease, box-shadow .18s ease, border-left-color .18s ease;
 		}
 		dl.col-md-3.sources:hover,
@@ -1991,7 +1991,7 @@ table {
 			grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 			gap: 24px;
 			padding: 1% 1.5%;
-			align-items: start;
+			align-items: stretch;
 		}
 
 			dd{ overflow:hidden; width:100%; word-wrap:break-word}

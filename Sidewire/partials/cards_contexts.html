@@ -67,11 +67,11 @@
 			
 
 				
-					<dl ng-repeat ="item in data.active track by $index" resize-card  class="col-md-3 contexts" class="card-text">
-						<dt >
-							
+					<dl ng-repeat ="item in data.active track by $index" resize-card  class="col-md-3 contexts">
+						<dt class="card-text">
+
 							<dd ng-hide="item.Edit==true">
-								<span class="class="card-title">Name: {{item.name}}</span>
+								Name: {{item.name}}
 							</dd>
 							<dd  ng-hide="item.Edit==true">
 								Id: {{item.id}}
